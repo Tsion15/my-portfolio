@@ -1,21 +1,21 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 50vh;
+}
+
+
+
+body {
   margin: 0;
-  padding-top: 80px;
+  padding-top: 80px; /* Adjust based on your header height */
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #2c2c54, #a843af);
   color: white;
-  overflow-x: hidden;
+  overflow-x: hidden;  /* ✅ Prevent horizontal scroll */
   overflow-y: auto;
 }
 
-section, header, footer {
-  display: block;
-  opacity: 1;
-  position: static;
-}
 
 .header {
   position: fixed;
