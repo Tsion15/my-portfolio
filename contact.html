@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Tsion</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>...same nav...</nav>
+
+  <section class="contact animate">
+    <h2>Let's Collaborate</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>You can also find me on <a href="https://www.upwork.com" target="_blank">Upwork</a></p>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+
+      const res = await fetch('http://localhost:5000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+      alert(result.success ? 'Message sent!' : 'Error sending message');
+    });
+  </script>
+</body>
+</html>
