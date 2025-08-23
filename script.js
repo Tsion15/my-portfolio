@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 📨 Initialize EmailJS
-  emailjs.init("kt22qACEe_3RhodwH");
-
   // 🔝 Back to Top Button Behavior
   const backToTop = document.querySelector(".back-to-top");
   window.addEventListener("scroll", () => {
