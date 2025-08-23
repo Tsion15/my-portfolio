@@ -48,7 +48,7 @@
   </p>  
 
   <div class="certificate-card">
-    <img src="../img/certificate-img1.png" class="certificate" alt="Certificate of Completion for [Course Name]">
+    <img src="/img/certificate-img1.png" class="certificate" alt="Certificate of Completion for [Course Name]">
   </div>
 </section>
 
@@ -88,6 +88,17 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   emailjs.init("kt22qACEe_3RhodwH"); // Tsion's actual EmailJS public key
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.btn');
+    if (button) {
+      button.addEventListener('click', () => {
+        // Your logic here
+        console.log('Button clicked!');
+      });
+    }
+  });
 </script>
 
   <script src="script.js"></script>
